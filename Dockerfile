@@ -13,6 +13,7 @@ CMD ["npm", "run", "dev-local"]
 
 # PRODUCTION - BUILDER
 FROM installer as builder
+ARG VITE_INITIAL_COUNTER
 RUN npm run build
 
 # PRODUCTION - RUNNER

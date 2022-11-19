@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev-local": "vite",
-    "dev-docker": "docker-compose up app-dev",
-    "pro-docker": "docker-compose up app-pro",
+    "dev-docker": "docker-compose up --build --abort-on-container-exit app-dev",
+    "pro-docker": "docker-compose up --build --abort-on-container-exit app-pro",
     "clean-docker": "docker-compose down && docker-compose down --volumes",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
